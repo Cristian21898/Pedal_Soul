@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Recursos - PedalSoul</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+  
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- GLightbox (Imágenes + Videos) -->
+    <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+
+    <!-- Tu CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+      body {
+        background-image: url('../images/paisajeBackgroundHori.jpg'); /* Cambia por tu imagen */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: white;
+      }
+
+      /* Oscurecer fondo para contraste */
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.45);
+        z-index: -1;
+      }
+
+      /* Animación */
+      .scale-up-center {
+        -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+      }
+
+      @-webkit-keyframes scale-up-center {
+        0% { -webkit-transform: scale(0.5); transform: scale(0.5); }
+        100% { -webkit-transform: scale(1); transform: scale(1); }
+      }
+      @keyframes scale-up-center {
+        0% { -webkit-transform: scale(0.5); transform: scale(0.5); }
+        100% { -webkit-transform: scale(1); transform: scale(1); }
+      }
+    </style>
+</head>
+
+<body>
+<header class="text-white text-center py-4 bg-dark bg-opacity-50">
+    <!-- Navegación -->
+    <nav>
+        <ul class="nav justify-content-center">
+            <li class="nav-item"><a class="nav-link text-white" href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="comunidad.html">Comunidad</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="multimedia.html">Multimedia</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="categorias_de_ciclismo.html">Categorías de Ciclismo</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">Recursos</a></li>
+        </ul>
+    </nav>
+    <h1 class="logo">Recursos</h1>
+    <p class="lead">Acá podrás encontrar tips, guías y mucha más información para que nunca salgas a la ruta sol@.</p>
+</header>
+
+<main class="container text-white my-5 scale-up-center">
+  <h2 class="text-center mb-4">Recursos para ciclistas</h2>
+  <div class="row g-4" id="recursosAccordion">
+
+    <!-- Card 1 -->
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card h-100 text-center shadow bg-dark bg-opacity-50 border-0">
+        <div class="card-body">
+          <h5 class="card-title">Mapa de rutas urbanas</h5>
+          <p class="card-text">Encuentra las mejores rutas para recorrer tu ciudad.</p>
+          <button class="btn btn-outline-light" data-bs-toggle="collapse" data-bs-target="#collapseRutas">
+            Ver más
+          </button>
+          <div class="collapse mt-3" id="collapseRutas" data-bs-parent="#recursosAccordion">
+            <img src="../images/urbanBgVertic.jpg" class="img-fluid rounded mb-2" alt="Mapa rutas urbanas">
+            <p class="card-description">Explora mapas detallados con rutas seguras, ciclovías y puntos de interés para ciclistas urbanos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card h-100 text-center shadow bg-dark bg-opacity-50 border-0">
+        <div class="card-body">
+          <h5 class="card-title">Talleres recomendados</h5>
+          <p class="card-text">Conoce los talleres de confianza para tu bici.</p>
+          <button class="btn btn-outline-light" data-bs-toggle="collapse" data-bs-target="#collapseTalleres">
+            Ver más
+          </button>
+          <div class="collapse mt-3" id="collapseTalleres" data-bs-parent="#recursosAccordion">
+            <img src="../images/sinUsar/2_fixedEsturranhaVerti_1.jpg" class="img-fluid rounded mb-2" alt="Taller de bicicletas">
+            <p class="card-description">Encuentra talleres certificados para reparaciones, mantenimiento y mejoras de tu bicicleta.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card h-100 text-center shadow bg-dark bg-opacity-50 border-0">
+        <div class="card-body">
+          <h5 class="card-title">Guías de seguridad</h5>
+          <p class="card-text">Pedalea seguro en cualquier entorno.</p>
+          <button class="btn btn-outline-light" data-bs-toggle="collapse" data-bs-target="#collapseSeguridad">
+            Ver más
+          </button>
+          <div class="collapse mt-3" id="collapseSeguridad" data-bs-parent="#recursosAccordion">
+            <img src="../images/sinUsar/2_fixedBeachVerti_1.jpg" class="img-fluid rounded mb-2" alt="Guía de seguridad ciclista">
+            <p class="card-description">Aprende las reglas de tránsito, uso del casco, y consejos para circular con seguridad en ciudad y montaña.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card h-100 text-center shadow bg-dark bg-opacity-50 border-0">
+        <div class="card-body">
+          <h5 class="card-title">Apps útiles para ciclismo</h5>
+          <p class="card-text">Tus rutas y entrenos al alcance de la mano.</p>
+          <button class="btn btn-outline-light" data-bs-toggle="collapse" data-bs-target="#collapseApps">
+            Ver más
+          </button>
+          <div class="collapse mt-3" id="collapseApps" data-bs-parent="#recursosAccordion">
+            <img src="../images/sinUsar/2_fixedBeachVerti_2.jpg" class="img-fluid rounded mb-2" alt="Apps para ciclistas">
+            <p class="card-description">Descubre aplicaciones para registrar rutas, medir tu rendimiento y encontrar grupos de ciclistas cerca de ti.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="text-center text-white py-4 border-top border-secondary mt-5">
+  © 2025 PedalSoul - Todos los derechos reservados.
+</footer>
+
+<!-- Bootstrap JS (necesario para Collapse) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

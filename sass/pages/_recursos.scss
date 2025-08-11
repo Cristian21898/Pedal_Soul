@@ -1,0 +1,73 @@
+/*Recursos para ciclistas*/
+/* Forzar todo el texto de las cards a blanco */
+.card,
+.card .card-title,
+.card .card-text,
+.card button {
+  color: #fff !important;
+}
+
+/* Asegurar que los enlaces dentro de cards también sean blancos */
+.card a {
+  color: #fff !important;
+}
+
+/* Descripción con fondo sombreado */
+.card-description {
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro translúcido */
+  color: #fff !important; /* Texto blanco brillante */
+  padding: 10px;
+  border-radius: 6px;
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+body {
+  background-image: url('../images/paisajeBackgroundHori.jpg'); /* Cambia por tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax suave */
+  background-repeat: no-repeat;
+  color: white;
+}
+
+/* Oscurecer fondo para mejorar contraste */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.45);
+  z-index: -1;
+}
+
+/* Animación scale-up-center */
+.scale-up-center {
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
