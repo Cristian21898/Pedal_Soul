@@ -20,7 +20,7 @@
 
     <style>
       body {
-        background-image: url('../images/paisajeBackgroundHori.jpg'); /* Cambia por tu imagen */
+        background-image: url('../images/paisajeBackgroundHori.jpg'); 
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -29,9 +29,7 @@
       }
 
       /* Oscurecer fondo para contraste */
-      body::before {
-        content: "";
-        position: fixed;
+      body::before {content: ""; position: fixed;
         top: 0;
         left: 0;
         width: 100%;
@@ -40,25 +38,18 @@
         z-index: -1;
       }
 
-      /* Animación */
-      .scale-up-center {
-        -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-      }
-
-      @-webkit-keyframes scale-up-center {
-        0% { -webkit-transform: scale(0.5); transform: scale(0.5); }
-        100% { -webkit-transform: scale(1); transform: scale(1); }
-      }
-      @keyframes scale-up-center {
-        0% { -webkit-transform: scale(0.5); transform: scale(0.5); }
-        100% { -webkit-transform: scale(1); transform: scale(1); }
-      }
     </style>
 </head>
 
 <body>
 <header class="text-white text-center py-4 bg-dark bg-opacity-50">
+  <!-- Boton menú hamburguesa solo visible en móvil-->
+    <div><button class="menu-toggle d-md-none btn btn-link text-white fs-2" type="button"
+    data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMen">
+    ☰
+    </button>
+</div>
+
     <!-- Navegación -->
     <nav>
         <ul class="nav justify-content-center">
@@ -80,7 +71,7 @@
     <!-- Card 1 -->
     <div class="col-12 col-md-6 col-lg-3">
       <div class="card h-100 text-center shadow bg-dark bg-opacity-50 border-0">
-        <div class="card-body">
+        <div class="card-body text-white">
           <h5 class="card-title">Mapa de rutas urbanas</h5>
           <p class="card-text">Encuentra las mejores rutas para recorrer tu ciudad.</p>
           <button class="btn btn-outline-light" data-bs-toggle="collapse" data-bs-target="#collapseRutas">
@@ -97,7 +88,7 @@
     <!-- Card 2 -->
     <div class="col-12 col-md-6 col-lg-3">
       <div class="card h-100 text-center shadow bg-dark bg-opacity-50 border-0">
-        <div class="card-body">
+        <div class="card-body text-white">
           <h5 class="card-title">Talleres recomendados</h5>
           <p class="card-text">Conoce los talleres de confianza para tu bici.</p>
           <button class="btn btn-outline-light" data-bs-toggle="collapse" data-bs-target="#collapseTalleres">
@@ -114,7 +105,7 @@
     <!-- Card 3 -->
     <div class="col-12 col-md-6 col-lg-3">
       <div class="card h-100 text-center shadow bg-dark bg-opacity-50 border-0">
-        <div class="card-body">
+        <div class="card-body text-white">
           <h5 class="card-title">Guías de seguridad</h5>
           <p class="card-text">Pedalea seguro en cualquier entorno.</p>
           <button class="btn btn-outline-light" data-bs-toggle="collapse" data-bs-target="#collapseSeguridad">
@@ -131,7 +122,7 @@
     <!-- Card 4 -->
     <div class="col-12 col-md-6 col-lg-3">
       <div class="card h-100 text-center shadow bg-dark bg-opacity-50 border-0">
-        <div class="card-body">
+        <div class="card-body text-white">
           <h5 class="card-title">Apps útiles para ciclismo</h5>
           <p class="card-text">Tus rutas y entrenos al alcance de la mano.</p>
           <button class="btn btn-outline-light" data-bs-toggle="collapse" data-bs-target="#collapseApps">

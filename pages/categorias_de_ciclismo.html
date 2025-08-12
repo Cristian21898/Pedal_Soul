@@ -3,50 +3,177 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Categorías de ciclismo - PedalSoul</title>
+    <title>Categorías de ciclismo - PedalSoul</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
   
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- GLightbox (Imágenes + Videos) -->
-  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+    <!-- GLightbox (si lo usas en otra parte) -->
+    <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
 
-  <!-- Tu CSS -->
-  <link rel="stylesheet" href="../css/style.css">
+    <!-- Tu CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+      /* Animación */
+      .shadow-drop-2-top {
+        -webkit-animation: shadow-drop-2-top 0.4s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+                animation: shadow-drop-2-top 0.4s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+      }
+      @-webkit-keyframes shadow-drop-2-top {
+        0% { transform: translateY(0); box-shadow: none; }
+        100% { transform: translateY(12px); box-shadow: 0 -12px 20px -12px rgba(0, 0, 0, 0.35); }
+      }
+      @keyframes shadow-drop-2-top {
+        0% { transform: translateY(0); box-shadow: none; }
+        100% { transform: translateY(12px); box-shadow: 0 -12px 20px -12px rgba(0, 0, 0, 0.35); }
+      }
+      .card img {
+        height: 200px;
+        object-fit: cover;
+      }
+      .modal-img {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    </style>
 </head>
 
 <body>
+
 <header class="text-white text-center py-4 bg-dark">
-<!--Navegación-->
     <nav>
         <ul class="nav justify-content-center">
-                <li class="nav-item"><a class="nav-link text-white" href="../index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="comunidad.html">Comunidad</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="multimedia.html">Multimedia</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">Categorías de Ciclismo</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="recursos.html">Recursos</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="comunidad.html">Comunidad</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="multimedia.html">Multimedia</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">Categorías de Ciclismo</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="recursos.html">Recursos</a></li>
         </ul>
     </nav>
-    <h1 class="logo">Categorías de ciclismo</h1>
-  <p class="lead">Recuerda que sin importar la marca de tu bici, la modalidad que prefieres practicar o lo robusta que sea tu rueda todos somos ciclistas.</p>
 </header>
 
-<main class="container text-white my-5">
-  <h2 class="text-center mb-4">Categorías de Ciclismo</h2>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item bg-dark text-white">🚴‍♂️ Ciclismo de ruta</li>
-    <li class="list-group-item bg-dark text-white">🚵‍♂️ Ciclismo de montaña</li>
-    <li class="list-group-item bg-dark text-white">🚲 Ciclismo urbano</li>
-    <li class="list-group-item bg-dark text-white">🎯 BMX y acrobático</li>
-  </ul>
-</main>
+<div class="container py-5">
+  <h1 class="text-center mb-5">Categorías de Ciclismo</h1>
+  <div class="row g-4">
 
-<footer class="text-center text-white py-4 border-top border-secondary mt-5">
-  © 2025 PedalSoul - Todos los derechos reservados.
-</footer>
+    <!-- Ruta -->
+    <div class="col-md-3">
+      <div class="card shadow-drop-2-top">
+        <img src="https://www.hubsports.mx/wp-content/uploads/2018/11/lo-que-debes-saber-antes-de-practicar-ciclismo-de-ruta.jpg" class="card-img-top" alt="Ruta">
+        <div class="card-body text-center">
+          <h5 class="card-title">Ruta</h5>
+          <p class="card-text">Ciclismo en carretera para largas distancias.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalRuta">Ver más</button>
+        </div>
+      </div>
+    </div>
 
+    <!-- Montaña -->
+    <div class="col-md-3">
+      <div class="card shadow-drop-2-top">
+        <img src="https://www.hubsports.mx/wp-content/uploads/2020/02/ciclismo-montana-equipo.jpg" class="card-img-top" alt="Montaña">
+        <div class="card-body text-center">
+          <h5 class="card-title">Montaña</h5>
+          <p class="card-text">Desafíos en senderos y terrenos irregulares.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalMontana">Ver más</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Urbano -->
+    <div class="col-md-3">
+      <div class="card shadow-drop-2-top">
+        <img src="../images/urbanBikeHori_2.jpg" class="card-img-top" alt="Urbano">
+        <div class="card-body text-center">
+          <h5 class="card-title">Urbano</h5>
+          <p class="card-text">Movilidad sostenible en la ciudad.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalUrbano">Ver más</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- BMX -->
+    <div class="col-md-3">
+      <div class="card shadow-drop-2-top">
+        <img src="https://media.istockphoto.com/id/514932815/es/foto/bmx-de-motorista.jpg?s=612x612&w=0&k=20&c=Lrrlsn2e0pI27xbPF8zAYNJzu23p7ZtXZ2hkF5sCLrI=" class="card-img-top" alt="BMX y acrobático">
+        <div class="card-body text-center">
+          <h5 class="card-title">BMX y Acrobático</h5>
+          <p class="card-text">Trucos y saltos espectaculares.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBmx">Ver más</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modales -->
+<div class="modal fade" id="modalRuta" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Ciclismo de Ruta</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="https://journey.app/blog/wp-content/uploads/2020/10/Ciclismo-de-ruta_practica.jpg" class="modal-img mb-3" alt="Ruta grande">
+        <p>El ciclismo de ruta es ideal para recorrer largas distancias en carreteras asfaltadas, aprovechando la velocidad y resistencia.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalMontana" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Ciclismo de Montaña</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="../images/2_mtbRoadHori_1.jpg" class="modal-img mb-3" alt="Montaña grande">
+        <p>El ciclismo de montaña se practica en terrenos difíciles, con ascensos y descensos técnicos.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalUrbano" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Ciclismo Urbano</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="../images/urbanBikeHori.jpg" class="modal-img mb-3 w-75" alt="Urbano grande">
+        <p>Perfecto para desplazarse de forma ecológica en entornos urbanos.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalBmx" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">BMX y Acrobático</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="https://us.123rf.com/450wm/anatoliygleb/anatoliygleb1902/anatoliygleb190200080/116485498-vista-baixa-do-ciclista-do-sportsman-que-salta-na-bicicleta-experimental-piloto-profissional-que.jpg?ver=6" class="modal-img mb-3" alt="BMX grande">
+        <p>Disciplina con saltos, acrobacias y maniobras extremas.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

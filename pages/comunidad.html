@@ -3,54 +3,76 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Comunidad ciclista - PedalSoul</title>
+    <title>Comunidad ciclista - PedalSoul</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
   
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- GLightbox (Imágenes + Videos) -->
-  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
-
-  <!-- Tu CSS -->
-  <link rel="stylesheet" href="../css/style.css">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="../css/comunidad.css">
 </head>
 
-<body>
+<body class="bg-dark text-white"> <!-- Forzamos fondo oscuro desde aquí -->
 <header class="text-white text-center py-4 bg-dark img-bg">
-<!--Navegación-->
+    <!-- Navegación -->
     <nav>
         <ul class="nav justify-content-center">
-                <li class="nav-item"><a class="nav-link text-white" href="../index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">Comunidad</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="multimedia.html">Multimedia</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="categorias_de_ciclismo.html">Categorías de Ciclismo</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="recursos.html">Recursos</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">Comunidad</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="multimedia.html">Multimedia</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="categorias_de_ciclismo.html">Categorías de Ciclismo</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="recursos.html">Recursos</a></li>
         </ul>
     </nav>
     <h1 class="logo">Nuestra comunidad ciclista</h1>
-    <p class="lead">Creemos en la unión de todos los que disfrutamos de disfrutar la vida a dos bielas.</p>
-    </div>
-    
+    <p class="lead">Creemos en la unión de todos los que disfrutamos de la vida a dos bielas.</p>
 </header>
 
-<main class="container text-white my-5">
-    <h2 class="text-center mb-4"> Nuestra Comunidad</h2>
-    <div class="row g-4">
+<main class="container my-5">
+    <h2 class="text-center mb-4">Nuestra Comunidad</h2>
+    <div class="row g-4 align-items-center">
         <div class="col-md-6">
-            <p>En PedalSoul creemos que cada ciclista tiene una historia única</p>
+            <p>
+                En PedalSoul creemos que cada ciclista tiene una historia única que contar.
+                Nuestra comunidad es un espacio para compartir experiencias, rutas y consejos que nos inspiran a seguir pedaleando juntos.
+            </p>
         </div>
         <div class="col-md-6">
             <img src="../images/VideoImageMtbSubidaHorizontal.jpg" class="img-fluid rounded shadow" alt="comunidad bici">
         </div>
     </div>
 </main>
+ <h3 class="text-center mt-5 mb-4">Historias y Aportes</h3>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="community-card">
+        <img src="../images/ciclistaFixedHori.jpg" alt="Historia 1" class="img-fluid rounded mb-3 w-50">
+        <h5>Javier - Ruta</h5>
+        <p>Recorrí 200 km en un fin de semana y descubrí pueblos que nunca había visitado.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="community-card">
+        <img src="../images/2_mtbRoadHori_1.jpg" alt="Historia 2" class="img-fluid rounded mb-3 w-75">
+        <h5>Ana - Montaña</h5>
+        <p>Subir al Pico Nevado fue un reto que recordaré toda mi vida.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="community-card">
+        <img src="../images/fixedCityHori.jpg" alt="Historia 3" class="img-fluid rounded mb-3 w-75">
+        <h5>Carlos - Urbano</h5>
+        <p>En bici al trabajo todos los días, reduje mi huella de carbono y mejoré mi salud.</p>
+      </div>
+    </div>
+  </div>
+</main>
 
-<footer class="text-center text-white py-4 border-top border-secondary mt-5"></footer>
-
-© 2025 PedalSoul - Todos los derechos reservados.
+<footer class="text-center text-white py-4 border-top border-secondary mt-5">
+  © 2025 PedalSoul - Todos los derechos reservados.
 </footer>
 
 </body>
